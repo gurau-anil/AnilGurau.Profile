@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.col {
+  flex: 1 1 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  @include respond(sm) {
+    flex: 1 1 50%;
+  }
+
+  @include respond(md) {
+    flex: 1 1 33.333%;
+  }
+
+  @include respond(lg) {
+    flex: 1 1 25%;
+  }
+}
+

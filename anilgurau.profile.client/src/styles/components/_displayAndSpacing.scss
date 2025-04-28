@@ -1,0 +1,37 @@
+.block{
+  display: block;
+}
+.inline-block{
+  display: inline-block;
+}
+$sm: 10px;
+.ml-sm{
+  margin-left: $sm;
+}
+
+.mr-sm{
+  margin-right: $sm;
+}
+
+.mb-sm{
+  margin-bottom: $sm;
+}
+
+.mt-sm{
+  margin-top: $sm;
+}
+
+.pl-sm{
+  padding-left: $sm;
+}
+.pr-sm{
+  padding-right: $sm;
+}
+.pb-sm{
+  margin-bottom: $sm;
+}
+
+.pt-sm{
+  margin-top: $sm;
+}
+  

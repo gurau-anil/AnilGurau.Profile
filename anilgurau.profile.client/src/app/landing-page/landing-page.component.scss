@@ -1,0 +1,92 @@
+@import '../../styles/abstract/variables';
+@import '../../styles/abstract/mixins';
+
+.backdrop {
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    // background:rgba(18, 6, 6, 0.8);
+    // clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    @include respond(md) {
+        height: 60vh;
+      }
+      @include respond(lg) {
+        height: 60vh;
+      }
+      @include respond(xl) {
+        height: 60vh;
+      }
+  }
+  
+  .backdrop::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: linear-gradient(to right bottom, rgba(18, 6, 6, 0.8), rgba(20, 14, 50, 0.8)),url("../../assets/images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1; /* Put it behind the content */
+  }
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 65%;
+    text-align: end;
+    position: relative;
+    z-index: 2;
+}
+
+.landing-section{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.content{
+    z-index: 2;
+    position: absolute;
+    top:50%;
+    
+}
+
+.landing-content{
+    margin-top:1rem;
+    flex-grow: 1;
+    display: flex;
+}
+
+.landing-content-left{
+ flex-grow: 1;
+ display: flex;
+ align-items: center;
+ font-size: 2rem;
+ font-weight: 900;
+}
+
+.landing-content-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 2rem;
+}
+.social-links{
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+.mb{
+    margin-bottom: 1rem;
+}
+
+.tech-icons{
+    font-size: 6rem;
+    // margin-right: 3rem;
+    opacity: 0.5;
+}
+
+.skill-sets{
+    overflow: hidden;
+}
