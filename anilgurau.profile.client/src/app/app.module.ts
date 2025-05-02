@@ -12,7 +12,6 @@ import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
     CarouselComponent
   ],
   imports: [

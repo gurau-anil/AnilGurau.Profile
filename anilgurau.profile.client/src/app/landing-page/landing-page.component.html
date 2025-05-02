@@ -1,14 +1,26 @@
 <section class="header-section backdrop">
     <div class="container landing-section">
-        <header class="header title">
+        <header class="header title" style="color: #e2e2e2">
             <span class="block">Anil</span>
             <span class="block">Gurau</span>
         </header>
         <main class="landing-content">
             <div class="landing-content-left">
-                <span>Website Coming Soon!!</span>
+                <!-- <div class="image-container col">
+                    <img src="../../assets/images/anil_gurau.png" alt="my-pic">
+                </div> -->
+                <!-- <h2 class="section-heading">Full-stack .Net Developer</h2> -->
+
+                <!-- <article class="text-justify">
+                    A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle
+                    both backend development (APIs, databases) and frontend design. I focus on creating efficient and
+                    well-structured solutions, and my experience includes developing applications for various business
+                    needs.
+                </article> -->
+                <!-- <span>Website Coming Soon!!</span> -->
             </div>
-            <div class="landing-content-right">
+
+            <div class="social-link-container">
                 <a class="icon-link" [href]="item.link" target="_blank" *ngFor="let item of links; index as i;">
                     <i [class]="item.icon"></i>
                 </a>
@@ -16,20 +28,128 @@
         </main>
     </div>
 </section>
-<!-- <section style="margin-top: 1rem">
-    <div class="container flex skill-sets" style="justify-content: space-between;">
-        <i class="inline-block tech-icons devicon-csharp-plain"></i>
-        <i class="inline-block tech-icons devicon-dotnetcore-plain"></i> 
-        <i class="inline-block tech-icons devicon-angular-plain"></i>
-        <i class="inline-block tech-icons devicon-javascript-plain"></i> 
-        <i class="inline-block tech-icons devicon-azuresqldatabase-plain"></i>
-        <i class="inline-block tech-icons devicon-csharp-plain"></i>
-        <i class="inline-block tech-icons devicon-dotnetcore-plain"></i> 
-        <i class="inline-block tech-icons devicon-angular-plain"></i>
+
+<section class="container section">
+    <div class="row blob-bg">
+        <div class="col-md-6 col-sm-12">
+            <h2>About Me</h2>
+            <article class="about-info">
+                A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
+                backend development (APIs, databases) and frontend design. I focus on creating efficient and well-structured
+                solutions, and my experience includes developing applications for various business needs.
+            </article>
+
+            <h3>Tech-stack I work on</h3>
+
+            <div class="tech-stack-section">
+                <button class="btn btn-outline-secondary">C#</button>
+                <button class="btn btn-outline-secondary">.Net</button>
+                <button class="btn btn-outline-secondary">API Integration</button>
+                <button class="btn btn-outline-secondary">MSSQL</button>
+                <button class="btn btn-outline-secondary">Angular</button>
+                <button class="btn btn-outline-secondary">VueJs</button>
+                <button class="btn btn-outline-secondary">Azure</button>
+            </div>
+            <div style="margin-top:2rem">
+                <button 
+                class="btn btn-secondary btn-lg" 
+                style="background: #6786b2; color: #ededed"
+                (click)="downloadFile()"
+                >Download CV  <i class="fa-solid fa-download"></i></button>
+            </div>
+        </div>
         
+        <div class="col-md-6 col-sm-12">
+            <div class="image-container col">
+            </div>
+        </div>
     </div>
 </section>
-<section class="">
+
+<section>
+    <app-marquee [data]="marqueeIcons.slice(0,marqueeIcons.length/2)"></app-marquee>
+    <app-marquee [data]="marqueeIcons.slice(marqueeIcons.length/2)" [reverse]="true"></app-marquee>
+</section>
+
+<section class="bg-dot">
+    <section class="container">
+        <div class="row flex">
+            <div class="col-md-6">
+                <div class="image-container col">
+                </div>
+            </div>
+            
+            <div class="col-md-6 blob-bg">
+                <h2>What I do?</h2>
+                <article class="about-info">
+                    A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
+                    backend development (APIs, databases) and frontend design. I focus on creating efficient and well-structured
+                    solutions, and my experience includes developing applications for various business needs.
+                </article>
+    
+                
+    
+                <button class="btn btn-outline-secondary">C#</button>
+                <button class="btn btn-outline-secondary">.Net</button>
+                <button class="btn btn-outline-secondary">Entity Framework</button>
+                <button class="btn btn-outline-secondary">Dapper</button>
+                <button class="btn btn-outline-secondary">T-SQL</button>
+                <button class="btn btn-outline-secondary">Stored Procedure</button>
+                <button class="btn btn-outline-secondary">Docker</button>
+                
+                <div style="margin-top:3rem">
+                    <button class="btn btn-secondary btn-lg" style="background: #6786b2; color: #ededed">Stored Procedure</button>
+                </div>
+                
+    
+            </div>
+            
+            
+        </div>
+    </section>
+</section>
+
+<section class="container section">
+    <div class="row flex">
+        <h2>My Blogs</h2>
+        <div class="col-md col-sm-12">
+            <div class="card" style="width: 100%">
+                <i class="fa-solid fa-code"></i>
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+        </div>
+    </div>
+            
+    <div style="margin-top:3rem">
+        <button class="btn btn-secondary btn-lg" style="background: #6786b2; color: #ededed">Stored Procedure</button>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row flex">
+        <h2>What I do?</h2>
+        <div class="col-md-4 col-sm-12 bg-primary">
+            asdf
+        </div>
+        <div class="col-md-4 col-sm-12 bg-primary">
+            asdf
+        </div>
+        <div class="col-md-4 col-sm-12 bg-primary">
+            asdf
+        </div>
+    </div>
+    
+</section>
+
+<!-- <om-neon-underline></om-neon-underline> -->
+
+
+<!-- <section class="">
     <div class="container">
         <div class="row">
             <div class="col">

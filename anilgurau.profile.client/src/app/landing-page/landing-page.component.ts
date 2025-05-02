@@ -1,8 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MarqueeComponent } from '../marquee/marquee.component';
+import { NgxNeonUnderlineComponent } from '@omnedia/ngx-neon-underline';
 
 @Component({
   selector: 'app-landing-page',
-  standalone: false,
+  standalone: true,
+  imports:[CommonModule, MarqueeComponent, NgxNeonUnderlineComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -25,8 +29,33 @@ export class LandingPageComponent {
       link: "https://anilgurau.hashnode.dev/"
     }
   ]
+
+  marqueeIcons = [ 
+    "devicon-csharp-plain",
+    "devicon-dot-net-plain",
+    "devicon-dotnetcore-plain",
+    "devicon-microsoftsqlserver-plain",
+    "devicon-azuresqldatabase-plain",
+    "devicon-redis-plain",
+    "devicon-docker-plain",
+    "devicon-javascript-plain",
+    "devicon-jquery-plain",
+    "devicon-typescript-plain",
+    "devicon-angular-plain",
+    "devicon-rxjs-plain",
+    "devicon-git-plain",
+    "devicon-github-original",
+    "devicon-rabbitmq-original"
+  ]
   
   ngOnInit(){
+  }
+
+  downloadFile() {
+    const link = document.createElement('a');
+    link.href = 'assets/files/AnilGurau_FullStackDev_CV.pdf';
+    link.download = 'AnilGurau_FullStackDev_CV.pdf';
+    link.click();
   }
 
 }
