@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MarqueeComponent } from '../marquee/marquee.component';
 import { NgxNeonUnderlineComponent } from '@omnedia/ngx-neon-underline';
+import { BlogSectionComponent } from "../blog-section/blog-section.component";
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports:[CommonModule, MarqueeComponent, NgxNeonUnderlineComponent],
+  imports: [CommonModule, MarqueeComponent, NgxNeonUnderlineComponent, BlogSectionComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
