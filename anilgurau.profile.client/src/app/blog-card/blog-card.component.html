@@ -1,18 +1,23 @@
 <div class="blog-card">
-    <div class="blog-image-container">
-        <small style=" text-align: right;">05/02/2025</small>
+    <div class="blog-image-container"
+    style='
+    background: linear-gradient(to right top, rgba(13, 110, 253, 0.4), rgba(103, 134, 178, 0.4)),url({{post.coverImage?.url}});
+    background-size: cover;
+    background-position: center;
+    '>
+        <small style=" text-align: right;">{{post.publishedAt | date:'MM/dd/yyyy'}}</small>
     </div>
     <div class="blog-content-container">
         <div class="blog-card-title">
-            <h4>Why Choose Onion Architecture for Better Software</h4>
+            <h4>{{post.title}}</h4>
         </div>
         <div class="blog-card-description">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry is simply dummy text of the printing and typesetting industry...</p>
+            <p>{{ post.brief | truncate: 180 }}</p>
         </div>
         
         <div class="card-action">
             <div class="action-right">
-                <a href="">Readmore</a>
+                <a href="https://anilgurau.hashnode.dev/{{post.slug}}">Readmore</a>
             </div>
         </div>
     </div>
