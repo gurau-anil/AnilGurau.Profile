@@ -3,11 +3,14 @@ import { Component } from '@angular/core';
 import { MarqueeComponent } from '../marquee/marquee.component';
 import { NgxNeonUnderlineComponent } from '@omnedia/ngx-neon-underline';
 import { BlogSectionComponent } from "../blog-section/blog-section.component";
+import { HashnodeService } from '../../services/hash-node.service';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
   imports: [CommonModule, MarqueeComponent, NgxNeonUnderlineComponent, BlogSectionComponent],
+  providers:[HashnodeService],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -48,8 +51,16 @@ export class LandingPageComponent {
     "devicon-github-original",
     "devicon-rabbitmq-original"
   ]
+  posts: Post[] = [];
+
+  constructor(private hashNodeService: HashnodeService){
+
+  }
   
   ngOnInit(){
+    this.hashNodeService.getLatestPosts().subscribe((res: any) => {
+      this.posts = res.data.publication.posts.edges.map((edge: any) => edge.node);
+    });
   }
 
   downloadFile() {

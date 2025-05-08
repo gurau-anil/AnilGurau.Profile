@@ -34,12 +34,16 @@
         <div class="col-md-6 col-sm-12">
             <h2>About Me</h2>
             <article class="about-info">
-                A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
+                <!-- A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
                 backend development (APIs, databases) and frontend design. I focus on creating efficient and well-structured
-                solutions, and my experience includes developing applications for various business needs.
+                solutions, and my experience includes developing applications for various business needs. -->
+                Results-oriented Full-Stack Developer with over 3 years of experience building user-friendly and
+                efficient web applications. I effectively bridge the gap between backend logic (APIs, databases) and
+                frontend design to create well-structured solutions that solve diverse business challenges.
             </article>
 
-            <h3>Tech-stack I work on</h3>
+            <!-- <h3>Tech-stack I work on</h3> -->
+            <h3>My ToolKit</h3>
 
             <div class="tech-stack-section">
                 <button class="btn btn-outline-secondary">C#</button>
@@ -52,14 +56,11 @@
             </div>
 
             <div style="margin-top:2rem">
-                <button 
-                class="btn btn-secondary btn-lg" 
-                style="background: #6786b2; color: #ededed"
-                (click)="downloadFile()"
-                >Download CV  <i class="fa-solid fa-download"></i></button>
+                <button class="btn btn-secondary btn-lg" style="background: #6786b2; color: #ededed"
+                    (click)="downloadFile()">Download CV <i class="fa-solid fa-download"></i></button>
             </div>
         </div>
-        
+
         <div class="col-md-6 col-sm-12">
             <div class="image-container col">
             </div>
@@ -79,18 +80,19 @@
                 <div class="image-container col">
                 </div>
             </div>
-            
+
             <div class="col-md-6 blob-bg">
-                <!-- <h2>What I do?</h2> -->
-                <h2>What I Offer</h2>
+                <h2>My Services</h2>
                 <article class="about-info">
-                    A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
-                    backend development (APIs, databases) and frontend design. I focus on creating efficient and well-structured
+                    A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle
+                    both
+                    backend development (APIs, databases) and frontend design. I focus on creating efficient and
+                    well-structured
                     solutions, and my experience includes developing applications for various business needs.
                 </article>
-    
-                
-    
+
+
+
                 <button class="btn btn-outline-secondary">C#</button>
                 <button class="btn btn-outline-secondary">.Net</button>
                 <button class="btn btn-outline-secondary">Entity Framework</button>
@@ -98,20 +100,21 @@
                 <button class="btn btn-outline-secondary">T-SQL</button>
                 <button class="btn btn-outline-secondary">Stored Procedure</button>
                 <button class="btn btn-outline-secondary">Docker</button>
-                
+
                 <div style="margin-top:3rem">
-                    <button class="btn btn-secondary btn-lg" style="background: #6786b2; color: #ededed">Stored Procedure</button>
+                    <button class="btn btn-secondary btn-lg" style="background: #6786b2; color: #ededed">Stored
+                        Procedure</button>
                 </div>
-                
-    
+
+
             </div>
-            
-            
+
+
         </div>
     </section>
 </section>
 
-<app-blog-section></app-blog-section>
+<app-blog-section [posts]="posts"></app-blog-section>
 
 
 
