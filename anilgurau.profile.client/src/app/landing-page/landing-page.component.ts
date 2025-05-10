@@ -1,15 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MarqueeComponent } from '../marquee/marquee.component';
-import { NgxNeonUnderlineComponent } from '@omnedia/ngx-neon-underline';
 import { BlogSectionComponent } from "../blog-section/blog-section.component";
 import { HashnodeService } from '../../services/hash-node.service';
 import { Post } from '../../models/post.model';
+import { ButtonComponent } from "../button/button.component";
+import { ConnectSectionComponent } from '../connect-section/connect-section.component';
+import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, MarqueeComponent, NgxNeonUnderlineComponent, BlogSectionComponent],
+  imports: [CommonModule, 
+    MarqueeComponent,
+    BlogSectionComponent, 
+    ButtonComponent,
+    ConnectSectionComponent,
+    NgxTypewriterComponent],
   providers:[HashnodeService],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
@@ -25,13 +32,17 @@ export class LandingPageComponent {
       link: "https://www.linkedin.com/in/anil-gurau/"
     },
     {
+      icon: "social-links mb fa-solid fa-envelope",
+      link: "mailto:contact@anilgurau.com"
+    },
+    {
       icon: "social-links mb fa-brands fa-upwork",
       link: "https://www.upwork.com/freelancers/~01f1f6114c21122cb4?mp_source=share"
     },
     {
       icon: "social-links mb fa-brands fa-hashnode",
       link: "https://anilgurau.hashnode.dev/"
-    }
+    },
   ]
 
   marqueeIcons = [ 
@@ -70,4 +81,8 @@ export class LandingPageComponent {
     link.click();
   }
 
+  openEmail(data: boolean){
+    const email = 'contact@anilgurau.com';
+    window.location.href = `mailto:${email}`;
+  }
 }

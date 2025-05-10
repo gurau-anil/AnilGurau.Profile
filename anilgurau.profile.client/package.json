@@ -24,6 +24,7 @@
     "@omnedia/ngx-dotpattern": "^2.0.0",
     "@omnedia/ngx-marquee": "^2.2.0",
     "@omnedia/ngx-neon-underline": "^2.0.0",
+    "@omnedia/ngx-typewriter": "^2.0.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.5",
     "jest-editor-support": "*",
