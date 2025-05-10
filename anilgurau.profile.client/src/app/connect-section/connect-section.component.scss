@@ -1,0 +1,45 @@
+@import '../../styles/abstract/variables';
+@import '../../styles/abstract/mixins';
+:host{
+
+    .connect-section {
+
+        .image-container{
+            display: flex;
+            justify-content: center;
+            background: url('../../assets/images/half_phonebooth.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat;
+    
+            @include respond(md) {
+                background: none;
+            }
+    
+            .img-md{
+                height: 350px;
+                display: none;
+                @include respond(md) {
+                    display: block;
+                }
+            }
+        }
+    
+        .connect-links{
+            display: flex; 
+            align-items: center; 
+            padding-top: 1rem;
+    
+            .social-links-img{
+                height: 30px; 
+                margin-right:2rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover{
+                    transform: translateY(-2px) scale(1.03);
+                    filter: drop-shadow(0 7px 5px rgba(67, 67, 67, 0.3));
+                  }
+            }
+        }
+    }
+}
