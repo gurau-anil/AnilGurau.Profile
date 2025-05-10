@@ -1,5 +1,5 @@
-<section class="bg-dot">
-    <section class="container section">
+<section class="section bg-dot" *ngIf="posts">
+    <div class="container">
         <div class="row">
             <h2>My Blogs</h2>
             <div *ngFor="let post of posts; let i = index;" class="col-md-4 col-sm-12" style="padding: 1rem;">
@@ -9,5 +9,5 @@
         <div class="btn-wrapper">
             <app-button [content]="'Explore All Blogs'" (btnClicked)="onClick($event)"></app-button>
         </div>
-    </section>
+    </div>
 </section>
