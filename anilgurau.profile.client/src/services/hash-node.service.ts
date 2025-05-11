@@ -1,12 +1,13 @@
 // src/app/services/hashnode.service.ts
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HashnodeService {
-  private apiUrl = 'https://gql.hashnode.com/';
+  private apiUrl = environment.hashnodeApiBaseUrl;
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +17,7 @@ export class HashnodeService {
   const body = {
     query: `
       query {
-        publication(host: "anilgurau.hashnode.dev") {
+        publication(host: "${environment.hashnodeBlogHost}") {
           posts(first: 3) {
             edges {
               node {
