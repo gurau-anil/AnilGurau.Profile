@@ -1,19 +1,10 @@
 @import '../abstract/variables';
 
 .section-title {
-    color: $section-title-color;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    background-color: $section-title-color;
-    height: 0.15rem;
-    width: 40px;
+    letter-spacing: 2px;
+    // text-transform: lowercase;
 }
 
 .icon-link {
-    color: $text-color;
+    color: $text-primary;
 }

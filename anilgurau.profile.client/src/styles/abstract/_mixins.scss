@@ -11,3 +11,17 @@ $breakpoint :  sm;
     @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints map.";
   }
 }
+
+@mixin full-vh {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+}
+
+@mixin heading1 {
+  font-size: 2.8rem;
+  @include respond(md) {
+    font-size:4.5rem;
+  }
+  font-weight: bold;
+  margin-bottom: 2rem;
+}

@@ -2,9 +2,16 @@
 $primary-color: #6786b2;
 $secondary-color: #58788C;
 $danger-color: #dc3545;
-$text-color: #6786b2;
 $section-title-color: #FF4A52;
+
 $background-color: #ededed;
+
+$button-primary: $primary-color;
+$button-secondary: $secondary-color;
+$button-danger: $danger-color;
+
+$text-primary: $primary-color; 
+$text-secondary: #e2e2e2; 
 
 .bg-main{
   background-color: $primary-color;

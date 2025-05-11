@@ -18,21 +18,15 @@ export class AppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
 
   constructor(private http: HttpClient) {}
+  title = 'anilgurau';
 
-  ngOnInit() {
-    // this.getForecasts();
+  ngOnInit(): void {
+    this.setViewportHeight();
+    window.addEventListener('resize', this.setViewportHeight);
   }
-
-  // getForecasts() {
-  //   this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-  //     (result) => {
-  //       this.forecasts = result;
-  //     },
-  //     (error) => {
-  //       console.error(error);
-  //     }
-  //   );
-  // }
-
-  title = 'anilgurau.profile.client';
+  
+  setViewportHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
 }

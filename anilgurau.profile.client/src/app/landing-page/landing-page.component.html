@@ -1,31 +1,30 @@
 <section class="header-section">
     <div class="container landing-section">
-        <header class="header title" style="color: #e2e2e2">
+        <!-- <header class="header-logo">
             <span class="block">Anil</span>
             <span class="block">Gurau</span>
-        </header>
+        </header> -->
 
         <main class="landing-content">
-
-            <div class="landing-description">
-                <om-typewriter 
-                    [words]="['Hello!','Namaste!','Hola!']" 
-                    [writeDelay]="500" 
-                    [writeSpeed]="200"
-                    styleClass=""
-                    class="landing-title"
-                ></om-typewriter>
-                <h1>I am Anil Gurau</h1>
-                <h5>A Full-Stack .Net Developer From The Land of Himalayas.</h5>
-            </div>
-            <div class="social-link-container">
+            <om-typewriter [words]="['namaste!','hello!']" [writeDelay]="500" [writeSpeed]="200"
+                styleClass="type-writer"></om-typewriter>
+            <h1 class="title-name">i am anil gurau</h1>
+            <h5 class="one-liner">A Full-Stack .Net Software Engineer From The Land of Himalayas.</h5>
+            <!-- <h5 class="one-liner">Coding from the Clouds — A Full-Stack Engineer in the Himalayas.</h5> -->
+            <div class="connect-links">
                 <a class="icon-link" [href]="item.link" target="_blank" *ngFor="let item of links; index as i;">
                     <i [class]="item.icon"></i>
                 </a>
             </div>
         </main>
-        
-        
+
+        <!-- <div class="social-link-container">
+            <a class="icon-link" [href]="item.link" target="_blank" *ngFor="let item of links; index as i;">
+                <i [class]="item.icon"></i>
+            </a>
+        </div> -->
+
+
     </div>
 </section>
 
@@ -34,7 +33,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <h2>About Me</h2>
+                <h2 class="section-title">About Me</h2>
                 <article class="section-info">
                     <!-- A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
                     backend development (APIs, databases) and frontend design. I focus on creating efficient and well-structured
@@ -44,7 +43,6 @@
                     frontend design to create well-structured solutions that solve diverse business challenges.
                 </article>
 
-                <!-- <h3>Tech-stack I work on</h3> -->
                 <h3>My ToolKit</h3>
 
                 <div class="tech-stack-section">
@@ -76,7 +74,7 @@
     <app-marquee [data]="marqueeIcons.slice(marqueeIcons.length/2)" [reverse]="true"></app-marquee>
 </section>
 
-<section class="section">
+<section class="section bg-dot services-section">
     <section class="container">
         <div class="row flex">
             <div class="col-md-6 d-none d-md-block">
@@ -85,19 +83,34 @@
             </div>
 
             <div class="col-md-6 blob-bg">
-                <h2>My Services</h2>
+                <h2 class="section-title">My Services</h2>
                 <article class="section-info">
                     Ready to build something amazing? Take a look at the services I provide to help you create powerful
                     and user-friendly web applications.
                 </article>
 
-                <button class="btn btn-outline-secondary">C#</button>
+                <div class="row" style="padding-left: 1rem">
+                    <div class="col service-card">
+                        <i class="fa-solid fa-paintbrush" style="font-size: 2rem; margin-bottom:2rem;"></i><br>
+                        I create user-friendly websites from design to development.
+                    </div>
+                    <div class="col service-card">
+                        <i class="fa-solid fa-server" style="font-size: 2rem; margin-bottom:2rem;"></i><br>
+                        I build the server-side logic and APIs for your applications.
+                    </div>
+                    <div class="col service-card">
+                        <i class="fa-solid fa-cloud" style="font-size: 2rem; margin-bottom:2rem;"></i><br>
+                        I get your website online and ensure it runs smoothly.
+                    </div>
+                </div>
+
+                <!-- <button class="btn btn-outline-secondary">C#</button>
                 <button class="btn btn-outline-secondary">.Net</button>
                 <button class="btn btn-outline-secondary">Entity Framework</button>
                 <button class="btn btn-outline-secondary">Dapper</button>
                 <button class="btn btn-outline-secondary">T-SQL</button>
                 <button class="btn btn-outline-secondary">Stored Procedure</button>
-                <button class="btn btn-outline-secondary">Docker</button>
+                <button class="btn btn-outline-secondary">Docker</button> -->
 
                 <div class="btn-wrapper">
                     <app-button [content]="'Let\'s Talk?'" (btnClicked)="openEmail($event)"></app-button>
@@ -114,46 +127,3 @@
 <app-blog-section [posts]="posts"></app-blog-section>
 
 <app-connect-section></app-connect-section>
-
-
-
-
-<!-- <om-neon-underline></om-neon-underline> -->
-
-
-<!-- <section class="">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="section-title mb-sm">
-                    Skill-Set
-                </h2>
-                <article>
-                    <span class="badge inline-block mr-sm mb-sm">C#</span>
-                    <span class="badge inline-block mr-sm mb-sm">.Net</span>
-                    <span class="badge inline-block mr-sm mb-sm">Entity Framework</span>
-                    <span class="badge inline-block mr-sm mb-sm">Dapper</span>
-                    <span class="badge inline-block mr-sm mb-sm">Html</span>
-                    <span class="badge inline-block mr-sm mb-sm">C#</span>
-                    <span class="badge inline-block mr-sm mb-sm">.Net</span>
-                    <span class="badge inline-block mr-sm mb-sm">Entity Framework</span>
-                    <span class="badge inline-block mr-sm mb-sm">Dapper</span>
-                    <span class="badge inline-block mr-sm mb-sm">Html</span>
-                </article>
-            </div>
-            <div class="col">
-                <h2 class="section-title">
-                    Work-Experience
-                </h2>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="section-title">
-            Skill-Set
-        </div>
-    </div>
-</section> -->
