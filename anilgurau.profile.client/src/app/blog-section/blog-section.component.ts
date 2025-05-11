@@ -3,7 +3,7 @@ import { BlogCardComponent } from '../blog-card/blog-card.component';
 import { CommonModule } from '@angular/common';
 import { Post } from '../../models/post.model';
 import { ButtonComponent } from '../button/button.component';
-
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-blog-section',
   imports: [BlogCardComponent, CommonModule, ButtonComponent],
@@ -15,6 +15,6 @@ export class BlogSectionComponent {
 
 
   onClick(data: boolean){
-    window.open('https://anilgurau.hashnode.dev', '_blank');
+    window.open(environment.hashnodeUrl, '_blank');
   }
 }

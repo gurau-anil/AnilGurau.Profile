@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Post } from '../../models/post.model';
 import { TruncatePipe } from '../pipes/truncate.pipe';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-blog-card',
@@ -12,4 +13,5 @@ import { CommonModule } from '@angular/common';
 })
 export class BlogCardComponent {
   @Input() post!: Post;
+  hashNodeUrl = environment.hashnodeUrl;
 }

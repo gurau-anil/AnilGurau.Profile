@@ -7,7 +7,7 @@ import { Post } from '../../models/post.model';
 import { ButtonComponent } from "../button/button.component";
 import { ConnectSectionComponent } from '../connect-section/connect-section.component';
 import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
-
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
@@ -25,23 +25,23 @@ export class LandingPageComponent {
   links =[
     {
       icon: "social-links mb fa-brands fa-github",
-      link: "https://github.com/gurau-anil"
+      link: environment.githubUrl
     },
     {
       icon: "social-links mb fa-brands fa-linkedin-in",
-      link: "https://www.linkedin.com/in/anil-gurau/"
+      link: environment.linkedInUrl
     },
     {
       icon: "social-links mb fa-solid fa-envelope",
-      link: "mailto:contact@anilgurau.com"
+      link: `mailto:${environment.emailAddress}`
     },
     {
       icon: "social-links mb fa-brands fa-upwork",
-      link: "https://www.upwork.com/freelancers/~01f1f6114c21122cb4?mp_source=share"
+      link: environment.upworkUrl
     },
     {
       icon: "social-links mb fa-brands fa-hashnode",
-      link: "https://anilgurau.hashnode.dev/"
+      link: environment.hashnodeUrl
     },
   ]
 
@@ -71,7 +71,9 @@ export class LandingPageComponent {
   ngOnInit(){
     this.hashNodeService.getLatestPosts().subscribe((res: any) => {
       this.posts = res.data.publication.posts.edges.map((edge: any) => edge.node);
+      console.log(this.posts);
     });
+    
   }
 
   downloadFile() {
@@ -82,7 +84,6 @@ export class LandingPageComponent {
   }
 
   openEmail(data: boolean){
-    const email = 'contact@anilgurau.com';
-    window.location.href = `mailto:${email}`;
+    window.location.href = `mailto:${environment.emailAddress}`;
   }
 }

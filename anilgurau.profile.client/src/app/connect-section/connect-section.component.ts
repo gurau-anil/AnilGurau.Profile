@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-connect-section',
   standalone: true,
@@ -9,15 +9,15 @@ import { Component } from '@angular/core';
 export class ConnectSectionComponent {
 
   openEmail(){
-    const email = 'contact@anilgurau.com';
+    const email = environment.emailAddress;
     window.location.href = `mailto:${email}`;
   }
 
   openLinkedin(){
-    window.open('https://www.linkedin.com/in/anil-gurau/');
+    window.open(environment.linkedInUrl, "_blank");
   }
 
   openUpwork(){
-    window.open("https://www.upwork.com/freelancers/~01f1f6114c21122cb4","_blank");
+    window.open(environment.upworkUrl,"_blank");
   }
 }

@@ -18,26 +18,23 @@
             </div>
         </main>
 
-        <!-- <div class="social-link-container">
+        <div class="social-link-container">
             <a class="icon-link" [href]="item.link" target="_blank" *ngFor="let item of links; index as i;">
                 <i [class]="item.icon"></i>
             </a>
-        </div> -->
+        </div>
 
 
     </div>
 </section>
 
 
-<section class="section bg-dot">
+<section class="section bg-dot about-section">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <h2 class="section-title">About Me</h2>
                 <article class="section-info">
-                    <!-- A Full-Stack Developer with 3+ years of experience, I build user-friendly web applications. I handle both
-                    backend development (APIs, databases) and frontend design. I focus on creating efficient and well-structured
-                    solutions, and my experience includes developing applications for various business needs. -->
                     Results-oriented Full-Stack Developer with over 3 years of experience building user-friendly and
                     efficient web applications. I effectively bridge the gap between backend logic (APIs, databases) and
                     frontend design to create well-structured solutions that solve diverse business challenges.
@@ -89,28 +86,26 @@
                     and user-friendly web applications.
                 </article>
 
-                <div class="row" style="padding-left: 1rem">
+                <div class="row service-card-section">
                     <div class="col service-card">
-                        <i class="fa-solid fa-paintbrush" style="font-size: 2rem; margin-bottom:2rem;"></i><br>
-                        I create user-friendly websites from design to development.
+                        <i class="fa-solid fa-paintbrush"></i><br>
+                        <p>
+                            Design and develop user-friendly websites that engage.
+                        </p>
                     </div>
                     <div class="col service-card">
-                        <i class="fa-solid fa-server" style="font-size: 2rem; margin-bottom:2rem;"></i><br>
-                        I build the server-side logic and APIs for your applications.
+                        <i class="fa-solid fa-server"></i>
+                        <p>
+                            Build robust server-side logic and APIs for your apps.
+                        </p>
                     </div>
                     <div class="col service-card">
-                        <i class="fa-solid fa-cloud" style="font-size: 2rem; margin-bottom:2rem;"></i><br>
-                        I get your website online and ensure it runs smoothly.
+                        <i class="fa-solid fa-cloud"></i>
+                        <p>
+                            Deploy and maintain your website for smooth online presence.
+                        </p>
                     </div>
                 </div>
-
-                <!-- <button class="btn btn-outline-secondary">C#</button>
-                <button class="btn btn-outline-secondary">.Net</button>
-                <button class="btn btn-outline-secondary">Entity Framework</button>
-                <button class="btn btn-outline-secondary">Dapper</button>
-                <button class="btn btn-outline-secondary">T-SQL</button>
-                <button class="btn btn-outline-secondary">Stored Procedure</button>
-                <button class="btn btn-outline-secondary">Docker</button> -->
 
                 <div class="btn-wrapper">
                     <app-button [content]="'Let\'s Talk?'" (btnClicked)="openEmail($event)"></app-button>
