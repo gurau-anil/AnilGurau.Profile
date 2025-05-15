@@ -71,7 +71,6 @@ export class LandingPageComponent {
   ngOnInit(){
     this.hashNodeService.getLatestPosts().subscribe((res: any) => {
       this.posts = res.data.publication.posts.edges.map((edge: any) => edge.node);
-      console.log(this.posts);
     });
     
   }
