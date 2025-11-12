@@ -8,12 +8,13 @@ import { ButtonComponent } from "../button/button.component";
 import { ConnectSectionComponent } from '../connect-section/connect-section.component';
 import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, 
+  imports: [CommonModule,
     MarqueeComponent,
-    BlogSectionComponent, 
+    BlogSectionComponent,
     ButtonComponent,
     ConnectSectionComponent,
     NgxTypewriterComponent],

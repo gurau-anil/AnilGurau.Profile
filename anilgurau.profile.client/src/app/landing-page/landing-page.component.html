@@ -1,124 +1,192 @@
 <section class="header-section">
-    <div class="container landing-section">
-        <!-- <header class="header-logo">
+  <div class="container landing-section">
+    <!-- <header class="header-logo">
             <span class="block">Anil</span>
             <span class="block">Gurau</span>
         </header> -->
 
-        <main class="landing-content">
-            <om-typewriter [words]="['namaste!','hello!']" [writeDelay]="500" [writeSpeed]="200"
-                styleClass="type-writer"></om-typewriter>
-            <h1 class="title-name">i am anil gurau</h1>
-            <h5 class="one-liner">A Full-Stack .Net Software Engineer From The Land of Himalayas.</h5>
-            <!-- <h5 class="one-liner">Coding from the Clouds — A Full-Stack Engineer in the Himalayas.</h5> -->
-            <div class="connect-links">
-                <a class="icon-link" [href]="item.link" target="_blank" *ngFor="let item of links; index as i;">
-                    <i [class]="item.icon"></i>
-                </a>
-            </div>
-        </main>
+    <main class="landing-content">
+      <om-typewriter
+        [words]="['namaste!', 'hello!']"
+        [writeDelay]="500"
+        [writeSpeed]="200"
+        styleClass="type-writer"
+      ></om-typewriter>
+      <h1 class="title-name">i am anil gurau</h1>
+      <h5 class="one-liner">
+        A Full-Stack .Net Software Engineer From The Land of Himalayas.
+      </h5>
+      <!-- <h5 class="one-liner">Coding from the Clouds — A Full-Stack Engineer in the Himalayas.</h5> -->
+      <div class="connect-links">
+        <a
+          class="icon-link"
+          [href]="item.link"
+          target="_blank"
+          *ngFor="let item of links; index as i"
+        >
+          <i [class]="item.icon"></i>
+        </a>
+      </div>
+    </main>
 
-        <div class="social-link-container">
-            <a class="icon-link" [href]="item.link" target="_blank" *ngFor="let item of links; index as i;">
-                <i [class]="item.icon"></i>
-            </a>
-        </div>
-
-
+    <div class="social-link-container">
+      <a
+        class="icon-link"
+        [href]="item.link"
+        target="_blank"
+        *ngFor="let item of links; index as i"
+      >
+        <i [class]="item.icon"></i>
+      </a>
     </div>
+  </div>
 </section>
 
-
 <section class="section bg-dot about-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <h2 class="section-title">About Me</h2>
-                <article class="section-info">
-                    Results-oriented Full-Stack Developer with over 3 years of experience building user-friendly and
-                    efficient web applications. I effectively bridge the gap between backend logic (APIs, databases) and
-                    frontend design to create well-structured solutions that solve diverse business challenges.
-                </article>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h2 class="section-title">About Me</h2>
+        <article class="section-info">
+          Results-oriented Full-Stack Developer with over 3 years of experience
+          building user-friendly and efficient web applications. I effectively
+          bridge the gap between backend logic (APIs, databases) and frontend
+          design to create well-structured solutions that solve diverse business
+          challenges.
+        </article>
 
-                <h3>My ToolKit</h3>
+        <h3>My ToolKit</h3>
 
-                <div class="tech-stack-section">
-                    <button class="btn btn-outline-secondary">C#</button>
-                    <button class="btn btn-outline-secondary">.Net</button>
-                    <button class="btn btn-outline-secondary">API Integration</button>
-                    <button class="btn btn-outline-secondary">MSSQL</button>
-                    <button class="btn btn-outline-secondary">Angular</button>
-                    <button class="btn btn-outline-secondary">VueJs</button>
-                    <button class="btn btn-outline-secondary">Azure</button>
-                </div>
-
-                <div class="btn-wrapper">
-                    <app-button [content]="'Download CV'" [icon]="'fa-solid fa-download'"
-                        (btnClicked)="downloadFile()"></app-button>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 d-none d-md-block">
-                <div class="image-container col">
-                </div>
-            </div>
+        <div class="tech-stack-section">
+          <button class="btn btn-outline-secondary">C#</button>
+          <button class="btn btn-outline-secondary">.Net</button>
+          <button class="btn btn-outline-secondary">API Integration</button>
+          <button class="btn btn-outline-secondary">MSSQL</button>
+          <button class="btn btn-outline-secondary">Angular</button>
+          <button class="btn btn-outline-secondary">VueJs</button>
+          <button class="btn btn-outline-secondary">Azure</button>
         </div>
+
+        <div class="btn-wrapper">
+          <app-button
+            [content]="'Download CV'"
+            [icon]="'fa-solid fa-download'"
+            (btnClicked)="downloadFile()"
+          ></app-button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 d-none d-md-block">
+        <div class="image-container col"></div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="section d-none d-md-block">
-    <app-marquee [data]="marqueeIcons.slice(0,marqueeIcons.length/2)"></app-marquee>
-    <app-marquee [data]="marqueeIcons.slice(marqueeIcons.length/2)" [reverse]="true"></app-marquee>
+  <app-marquee
+    [data]="marqueeIcons.slice(0, marqueeIcons.length / 2)"
+  ></app-marquee>
+  <app-marquee
+    [data]="marqueeIcons.slice(marqueeIcons.length / 2)"
+    [reverse]="true"
+  ></app-marquee>
 </section>
 
 <section class="section bg-dot services-section">
-    <section class="container">
-        <div class="row flex">
-            <div class="col-md-6 d-none d-md-block">
-                <div class="service-image-container col">
-                </div>
-            </div>
+  <section class="container">
+    <div class="row flex">
+      <div class="col-md-6 d-none d-md-block">
+        <div class="service-image-container col"></div>
+      </div>
 
-            <div class="col-md-6 blob-bg">
-                <h2 class="section-title">My Services</h2>
-                <article class="section-info">
-                    Ready to build something amazing? Take a look at the services I provide to help you create powerful
-                    and user-friendly web applications.
-                </article>
+      <div class="col-md-6 blob-bg">
+        <h2 class="section-title">My Services</h2>
+        <article class="section-info">
+          Ready to build something amazing? Take a look at the services I
+          provide to help you create powerful and user-friendly web
+          applications.
+        </article>
 
-                <div class="row service-card-section">
-                    <div class="col service-card">
-                        <i class="fa-solid fa-paintbrush"></i><br>
-                        <p>
-                            Design and develop user-friendly websites that engage.
-                        </p>
-                    </div>
-                    <div class="col service-card">
-                        <i class="fa-solid fa-server"></i>
-                        <p>
-                            Build robust server-side logic and APIs for your apps.
-                        </p>
-                    </div>
-                    <div class="col service-card">
-                        <i class="fa-solid fa-cloud"></i>
-                        <p>
-                            Deploy and maintain your website for smooth online presence.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="btn-wrapper">
-                    <app-button [content]="'Let\'s Talk?'" (btnClicked)="openEmail($event)"></app-button>
-                </div>
-
-
-            </div>
-
-
+        <div class="row service-card-section">
+          <div class="col service-card">
+            <i class="fa-solid fa-paintbrush"></i><br />
+            <p>Design and develop user-friendly websites that engage.</p>
+          </div>
+          <div class="col service-card">
+            <i class="fa-solid fa-server"></i>
+            <p>Build robust server-side logic and APIs for your apps.</p>
+          </div>
+          <div class="col service-card">
+            <i class="fa-solid fa-cloud"></i>
+            <p>Deploy and maintain your website for smooth online presence.</p>
+          </div>
         </div>
-    </section>
+
+        <div class="btn-wrapper">
+          <app-button
+            [content]="'Let\'s Talk?'"
+            (btnClicked)="openEmail($event)"
+          ></app-button>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
 
 <app-blog-section [posts]="posts"></app-blog-section>
+
+
+<!-- <section-wrapper [title]="'Projects'">
+  <div class="row">
+    <h2>Projects</h2>
+    <div
+      class="col-md-4 col-sm-12"
+      style="padding: 1rem; background: rgb(255, 255, 255); aspect-ratio: 2"
+    >
+      <app-card>
+        <div slot="content">
+            img
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+        </div>
+      </app-card>
+    </div>
+    <div
+      class="col-md-4 col-sm-12"
+      style="padding: 1rem; background: rgb(255, 255, 255); aspect-ratio: 2"
+    >
+      <app-card>
+        <div slot="content">
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+        </div>
+      </app-card>
+    </div>
+    <div
+      class="col-md-4 col-sm-12"
+      style="padding: 1rem; background: rgb(255, 255, 255); aspect-ratio: 2"
+    >
+      <app-card>
+        <div slot="content">
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+          <p>this is a content section.</p>
+        </div>
+      </app-card>
+    </div>
+  </div>
+</section-wrapper> -->
 
 <app-connect-section></app-connect-section>
