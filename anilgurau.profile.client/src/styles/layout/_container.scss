@@ -1,18 +1,20 @@
+@use "../abstract/mixins";
+
 .container-section {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 1rem;
 
-  @include respond(md) {
+  @include mixins.respond(md) {
     max-width: 720px;
     padding: 1.5rem;
   }
-  @include respond(lg) {
+  @include mixins.respond(lg) {
     max-width: 960px;
     padding: 2rem;
   }
-  @include respond(xl) {
+  @include mixins.respond(xl) {
     max-width: 1140px;
     padding: 2.5rem;
   }
@@ -27,11 +29,11 @@
 .section{
   padding-top : 2rem;
   padding-bottom : 2rem;
-  @include respond(md) {
-    padding-top : 4rem;
-  padding-bottom : 4rem;
-  }
   margin-top: 3rem;
+  @include mixins.respond(md) {
+    padding-top : 4rem;
+    padding-bottom : 4rem;
+  }
   // min-height: 100vh;
 }
 

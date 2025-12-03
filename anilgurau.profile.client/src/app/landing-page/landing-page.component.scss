@@ -1,5 +1,5 @@
-@import '../../styles/abstract/variables';
-@import '../../styles/abstract/mixins';
+@use '../../styles/abstract/variables';
+@use '../../styles/abstract/mixins';
 
 .header-section {
     position: relative;
@@ -7,7 +7,7 @@
     height: 100vh;
     // @include full-vh;
 
-    @include respond(md) {
+    @include mixins.respond(md) {
         height: 100vh;
     }
     // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 50% 94.75%, 25% 100%, 0% 100%);
@@ -48,7 +48,7 @@
         text-align: end;
         position: relative;
         z-index: 2;
-        color: $text-secondary;
+        color: variables.$text-secondary;
     }
 
     .landing-content {
@@ -59,7 +59,7 @@
         // background: maroon;
         transform: translateX(-50%);
         text-align: center;
-        color: $text-secondary;
+        color: variables.$text-secondary;
         padding-right: 1rem;
         padding-left: 1rem;
 
@@ -70,19 +70,18 @@
 
         .one-liner {
             letter-spacing: 1px;
-
-            @include respond(md) {
-                letter-spacing: 2px;
-            }
-
             line-height: 2.5rem;
             margin-top: 2rem;
+            
+            @include mixins.respond(md) {
+                letter-spacing: 2px;
+            }
         }
 
         .connect-links {
             margin-top: 3.5rem;
 
-            @include respond(lg) {
+            @include mixins.respond(lg) {
                 display: none;
             }
 
@@ -90,7 +89,7 @@
                 text-decoration: none;
                 font-size: 1.5rem;
                 margin-right: 2rem;
-                color: $text-secondary;
+                color: variables.$text-secondary;
 
                 &:last-child {
                     margin-right: 0;
@@ -117,14 +116,14 @@
         width: 310px;
         display: none;
 
-        @include respond(lg) {
+        @include mixins.respond(lg) {
             display: flex;
             justify-content: space-between;
         }
 
         a {
             text-decoration: none;
-            color: $text-secondary;
+            color: variables.$text-secondary;
 
             .social-links {
                 font-size: 1.8rem;
@@ -181,8 +180,8 @@
             }
 
             &:hover {
-                background: $primary-color;
-                color: $text-secondary;
+                background: variables.$primary-color;
+                color: variables.$text-secondary;
 
                 i {
                     transform: scale(1.2);
@@ -207,7 +206,7 @@
 }
 
 .btn:hover {
-    color: $text-secondary;
+    color: variables.$text-secondary;
     background: #6786b2;
     cursor: default;
 }

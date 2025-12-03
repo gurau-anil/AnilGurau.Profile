@@ -7,8 +7,7 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-blog-section',
   imports: [BlogCardComponent, CommonModule, ButtonComponent],
-  templateUrl: './blog-section.component.html',
-  styleUrl: './blog-section.component.scss'
+  templateUrl: './blog-section.component.html'
 })
 export class BlogSectionComponent {
   @Input() posts: Post[] = [];

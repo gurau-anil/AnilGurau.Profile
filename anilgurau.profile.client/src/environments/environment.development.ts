@@ -7,4 +7,5 @@ export const environment = {
     emailAddress: "contact@anilgurau.com",
     hashnodeApiBaseUrl: "https://gql.hashnode.com",
     hashnodeBlogHost: "anilgurau.hashnode.dev",
+    baseUrl: "https://localhost:7004",
 };

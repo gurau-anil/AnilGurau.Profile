@@ -1,22 +1,19 @@
 
-@import './styles/base/fonts';
+@use 'styles/base/fonts';
+@use 'styles/abstract/mixins';
 
-@import './styles/abstract/variables';
-@import './styles/abstract/mixins';
-
-@import './styles/base/reset';
-@import './styles/base/typography';
+@use 'styles/base/reset';
+@use 'styles/base/typography';
 
 
-@import './styles/layout/container';
-@import './styles/layout/grid';
+@use 'styles/layout/container';
+@use 'styles/layout/grid';
 
-@import './styles/components/button';
-@import './styles/components/card';
-@import './styles/components/header';
-@import './styles/components/displayAndSpacing';
-@import './styles/components/textAndIcon';
-@import './styles/components/badge';
+@use 'styles/components/button';
+@use 'styles/components/card';
+@use 'styles/components/header';
+@use 'styles/components/displayAndSpacing';
+@use 'styles/components/textAndIcon';
 
 .bg-dot {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%236786b2' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -35,8 +32,8 @@
 }
 
 .type-writer{
-    @include heading1;
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: 0.2rem;
+    @include mixins.heading1;
 }

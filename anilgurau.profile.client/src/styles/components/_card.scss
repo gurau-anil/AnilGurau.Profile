@@ -1,12 +1,14 @@
+@use "../abstract/mixins";
+
 
   .card {
     padding: 1rem;
     
-    @include respond(md) {
+    @include mixins.respond(md) {
       padding: 2rem;
     }
   
-    @include respond(lg) {
+    @include mixins.respond(lg) {
       padding: 3rem;
     }
   }

@@ -1,5 +1,5 @@
-@import '../../styles/abstract/variables';
-@import '../../styles/abstract/mixins';
+// @use '../../styles/abstract/variables';
+@use '../../styles/abstract/mixins';
 :host{
 
     .connect-section {
@@ -11,14 +11,14 @@
             background-size: contain; 
             background-repeat: no-repeat;
     
-            @include respond(md) {
+            @include mixins.respond(md) {
                 background: none;
             }
     
             .img-md{
                 height: 350px;
                 display: none;
-                @include respond(md) {
+                @include mixins.respond(md) {
                     display: block;
                 }
             }

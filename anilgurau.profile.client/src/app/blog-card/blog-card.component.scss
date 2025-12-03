@@ -1,4 +1,4 @@
-@import '../../styles/abstract/variables';
+@use '../../styles/abstract/variables';
 
 :host {
     .blog-card {
@@ -60,7 +60,7 @@
 
 
         .card-action {
-            color: $section-title-color;
+            color: variables.$section-title-color;
             font-weight: 500;
             margin-top: 1.5rem;
             display: flex;
@@ -68,8 +68,8 @@
 
             .action-right {
                 border-radius: 0;
-                border-color: $section-title-color;
-                color: $section-title-color;
+                border-color: variables.$section-title-color;
+                color: variables.$section-title-color;
                 display: flex;
                 align-items: center;
 

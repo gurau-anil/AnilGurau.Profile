@@ -1,4 +1,6 @@
-@import '../abstract/variables';
+@use '../abstract/variables';
+@use "../abstract/mixins";
+
 .button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -6,12 +8,12 @@
     color: white;
     border-radius: 4px;
   
-    @include respond(md) {
+    @include mixins.respond(md) {
       font-size: 1.2rem;
       padding: 0.75rem 1.5rem;
     }
   
-    @include respond(lg) {
+    @include mixins.respond(lg) {
       font-size: 1.4rem;
       padding: 1rem 2rem;
     }

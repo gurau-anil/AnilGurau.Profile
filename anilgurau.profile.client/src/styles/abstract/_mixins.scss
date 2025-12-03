@@ -1,8 +1,9 @@
-@import 'variables';
+@use "sass:map";
+@use '../abstract/variables';
 
 $breakpoint :  sm;
 @mixin respond($breakpoint) {
-  $size: map-get($breakpoints, $breakpoint);
+  $size: map.get(variables.$breakpoints, $breakpoint);
   @if $size {
     @media (min-width: $size) {
       @content;
@@ -19,9 +20,9 @@ $breakpoint :  sm;
 
 @mixin heading1 {
   font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
   @include respond(md) {
     font-size:4.5rem;
   }
-  font-weight: bold;
-  margin-bottom: 2rem;
 }

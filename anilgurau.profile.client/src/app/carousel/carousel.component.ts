@@ -4,8 +4,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-carousel',
   standalone: false,
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  templateUrl: './carousel.component.html'
 })
 export class CarouselComponent {
   customOptions: OwlOptions = {
